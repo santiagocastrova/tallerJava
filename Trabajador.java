@@ -1,5 +1,5 @@
 
 public interface Trabajador {
 
-    void RealizarTarea();
+   public void RealizarTarea();
 }

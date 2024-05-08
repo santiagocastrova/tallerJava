@@ -6,6 +6,14 @@ public class Persona {
     private int Edad;
     private Date FechaDeNacimiento;
 
+    public Persona(String Nombre, int Edad, Date FechaDeNacimiento){
+        this.Nombre= Nombre;
+        this.Edad= Edad;
+        this.FechaDeNacimiento= FechaDeNacimiento;
+        
+    }
+
+
     public void establecerNombre(String Nombre) {
         if (Nombre == "" || Nombre == null) {
             System.out.println("El nombre es invalido");

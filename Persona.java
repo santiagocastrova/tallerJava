@@ -1,10 +1,16 @@
+import java.sql.Date;
+
 public class Persona{
     private String Nombre;
     private int Edad;
-    private String FechaDeNacimiento;   
+    private Date FechaDeNacimiento;   
     
         public void establecerNombre(String Nombre){
-            this.Nombre = Nombre;
+            if(Nombre == "" || Nombre == null ){
+                System.out.println("El nombre es invalido");
+            }else{
+                this.Nombre=Nombre;
+            }
         }
     
         public String obtenerNombre(){
@@ -12,8 +18,11 @@ public class Persona{
         }
     
         public void establecerEdad(int Edad){ 
-        
+            if (Edad < 0) {
+                System.out.println("La edad debe ser mayor a 0");
+            }else{
                 this.Edad = Edad;
+            }
         }  
         
     
@@ -21,11 +30,16 @@ public class Persona{
             return this.Edad;
         }
     
-        public void establecerFechaDeNacimiento(String FechaDeNacimiento){
-            this.FechaDeNacimiento = FechaDeNacimiento;
+        public void establecerFechaDeNacimiento(Date FechaDeNacimiento){
+            if(FechaDeNacimiento == null ){
+                System.out.println("La fecha es invalida");
+            }else{
+                this.FechaDeNacimiento=FechaDeNacimiento;
+            }
         }
+        
     
-        public String obtenerFechaDeNacimiento(){
+        public Date obtenerFechaDeNacimiento(){
             return this.FechaDeNacimiento;
         }
     

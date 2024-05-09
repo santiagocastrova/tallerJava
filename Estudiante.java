@@ -12,6 +12,10 @@ abstract public class Estudiante  extends Persona implements Trabajador{
         public String toString() {
             return super.toString() + ", Grado: " + grado;
         }
+
+        public void RealizarTarea(){
+            System.out.println("realizando tarea escolar");
+        }
     }
 
     

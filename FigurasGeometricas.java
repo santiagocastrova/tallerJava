@@ -27,6 +27,14 @@ public class FigurasGeometricas {
             this.ancho = ancho;
         }
 
+        public double calcularArea() {
+            return longitud * ancho;
+        }
+
+        public double calcularPerimetro() {
+            return 2 * (longitud + ancho);
+        }
+
     }
 
     public class Circulo extends FigurasGeometricas {
@@ -36,5 +44,14 @@ public class FigurasGeometricas {
             this.radio = radio;
         }
 
+        public double calcularArea() {
+            return Math.PI * radio * radio;
+        }
+
+        public double calcularPerimetro() {
+            return 2 * Math.PI * radio;
+        }
+
     }
+
 }
